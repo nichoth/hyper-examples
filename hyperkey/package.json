@@ -1,0 +1,25 @@
+{
+  "name": "hyperkey-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t brfs -d browser.js > static/bundle.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ecstatic": "^0.7.1",
+    "hyperkey": "0.0.2",
+    "level-sublevel": "^6.4.6",
+    "level-test": "^1.7.0",
+    "level-track": "^0.1.0",
+    "shoe": "0.0.15",
+    "trumpet": "^1.7.1"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.0"
+  }
+}

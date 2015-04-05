@@ -1,0 +1,13 @@
+{
+  "name": "more-button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "browser.js",
+  "scripts": {
+    "build": "browserify -t brfs browser.js > static/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "license": "ISC"
+}
