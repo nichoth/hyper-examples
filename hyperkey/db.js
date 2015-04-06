@@ -1,6 +1,8 @@
-var level = require('level-test')();
+var level = require('level');
+var hooks = require('level-hooks');
 var sub = require('level-sublevel');
 var db = sub(level('hyperkey-example.db', { valueEncoding: 'json' }));
+hooks(db);
 module.exports = db;
 
 var messages = [
