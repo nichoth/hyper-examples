@@ -1,0 +1,25 @@
+{
+  "name": "render-assoc-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "ecstatic": "^0.7.2",
+    "hyperkey": "0.0.2",
+    "level-assoc": "^0.13.0",
+    "level-sublevel": "^5.0.1",
+    "level-test": "^1.7.0",
+    "render-assoc": "^0.0.1",
+    "shoe": "0.0.15",
+    "trumpet": "^1.7.1"
+  },
+  "devDependencies": {
+    "brfs": "^1.4.0"
+  },
+  "scripts": {
+    "build": "browserify -t brfs browser.js > static/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "license": "ISC"
+}
