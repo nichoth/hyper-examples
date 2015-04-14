@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify -t brfs -d browser.js > static/bundle.js",
-    "start": "node server.js",
+    "start": "npm run build && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nick Thomas <nichoth@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "level-track": "https://github.com/nichoth/level-track/tarball/update-deps",
     "ecstatic": "^0.7.1",
     "hyperkey": "0.0.2",
     "level": "^0.18.0",
-    "level-hooks": "^4.5.0",
+    "level-livefeed": "^0.2.0",
     "level-sublevel": "^6.4.6",
-    "level-track": "^0.1.0",
     "shoe": "0.0.15",
     "trumpet": "^1.7.1"
   },

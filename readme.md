@@ -1,5 +1,5 @@
 # Hyper Examples #
-Example configurations of hyper* modules.
+Example configurations of hyper* node modules.
 
 Hyperspace -- render streams of html on the client and the server.
 

@@ -36,7 +36,6 @@ setTimeout(function () {
 }, 2200);
 
 setInterval(function () {
-    console.log("ham");
     var name = Math.floor(Math.random() * Math.pow(16, 8)).toString(16);
     var space = spaces[Math.floor(Math.random() * spaces.length)];
     db.put(name, { type: 'hacker', name: name, hackerspace: space });

@@ -1,12 +1,16 @@
 var http = require('http');
-var ecstatic = require('ecstatic')(__dirname + '/static');
-var trumpet = require('trumpet');
+var ecstatic = require('ecstatic')(__dirname + '/static');  // static server
+var trumpet = require('trumpet');  // html templates
 var fs = require('fs');
-
 var db = require('./db.js');
-var tracker = require('level-track')(db);
 var render = require('./render/message.js');
+var tracker = require('level-track')(db);
+// var liveStream = require('level-livefeed')(db);  // db update stream
+var shoe = require('shoe');  // websockets
 
+var port = process.argv[2] || 8000;
+
+// server
 var server = http.createServer(function (req, res) {
     if (req.url === '/') {
         var tr = trumpet();
@@ -24,10 +28,10 @@ var server = http.createServer(function (req, res) {
     }
     else ecstatic(req, res);
 });
-server.listen(8000);
-console.log('listening on port 8000');
+server.listen(port);
+console.log('listening on port ' + port);
 
-var shoe = require('shoe');
+// websockets
 var sock = shoe(function (stream) {
     stream.pipe(tracker()).pipe(stream);
 });
