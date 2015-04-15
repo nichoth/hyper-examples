@@ -1,17 +1,15 @@
 {
   "scripts": {
+    "start": "npm run build && npm run server",
     "build": "browserify -t brfs -d browser.js > static/bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node server.js"
+    "server": "node server.js"
   },
   "dependencies": {
     "ecstatic": "^0.7.3",
     "hyperspace": "^2.1.4",
     "hyperstream": "^1.2.2",
     "shoe": "0.0.15",
-    "slice-file": "^0.2.1",
-    "split": "^0.3.3",
-    "through2": "^0.6.5"
+    "slice-file": "^0.2.1"
   },
   "devDependencies": {
     "brfs": "^1.4.0"

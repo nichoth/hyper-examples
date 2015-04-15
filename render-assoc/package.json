@@ -17,9 +17,9 @@
     "brfs": "^1.4.0"
   },
   "scripts": {
-    "build": "browserify -t brfs browser.js > static/bundle.js",
+    "build": "browserify -t brfs -d browser.js > static/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npm run build && node server.js"
   },
   "license": "ISC"
 }

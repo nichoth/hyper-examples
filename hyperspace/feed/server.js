@@ -17,7 +17,7 @@ var server = http.createServer(function (req, res) {
     else ecstatic(req, res);
 });
 server.listen(8000);
-console.log('listening on port 8000');
+console.log('Listening on :8000');
 
 var shoe = require('shoe');
 var sock = shoe(function (stream) {

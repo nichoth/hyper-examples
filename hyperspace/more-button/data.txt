@@ -1,2 +1,3 @@
 {"who":"person","message":"blablabla","time":1428268833762}
 {"who":"robot","message":"blop","time":1428268846274}
+{"who":"bla","message":"something","time":1429056460460}
