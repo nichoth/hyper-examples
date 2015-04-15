@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "browserify -t brfs -d browser.js > static/bundle.js",
+    "cleandb": "rm -rf hyperkey-example.db",
     "start": "npm run build && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

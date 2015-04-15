@@ -7,3 +7,20 @@ Example configurations of hyper* node modules.
 
 **Render-assoc** -- Use hyperkey to render relational data from a level-assoc db.
 
+
+## Dependency Stack
+
+    render-assoc
+       ^
+       |
+    hyperkey
+       ^
+       |
+    hyperspace
+       ^
+       |
+    hyperglue
+       ^
+       |
+     trumpet
+
